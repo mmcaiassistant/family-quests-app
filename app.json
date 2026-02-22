@@ -1,30 +1,53 @@
 {
   "expo": {
-    "name": "family-quests-app",
+    "name": "Family Quests",
     "slug": "family-quests-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "familyquests",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#9A93FF"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mmcmedia.familyquests"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#6C63FF"
       },
+      "package": "com.mmcmedia.familyquests",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "family-quests-homeschool"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to upload work samples."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "The app needs access to your camera to capture photos for quests."
+        }
+      ]
+    ]
   }
 }
